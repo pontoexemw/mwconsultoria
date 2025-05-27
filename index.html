@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Orçamento - MW Consultoria</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --color-primary: #003366;
+    --color-secondary: #f4f4f4;
+    --color-accent: #0077cc;
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: var(--color-secondary);
+    color: #333;
+  }
+  header {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  header img {
+    max-width: 120px;
+    display: block;
+    margin: 0 auto 10px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  header p {
+    margin: 5px 0;
+  }
+  .container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  section {
+    padding: 30px;
+    border-bottom: 1px solid #eee;
+  }
+  section:last-child {
+    border-bottom: none;
+  }
+  h2 {
+    color: var(--color-primary);
+    margin-top: 0;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  .cta-btn:hover {
+    background: #005fa3;
+  }
+  footer {
+    background: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+  }
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="logo-mw-azul.svg" alt="Logo MW Consultoria" />
+  <h1>Orçamento para Implantação de Servidor</h1>
+  <p>MW Consultoria</p>
+  <p>Rua Dona Primitiva Vianco, 1052, Osasco Centro, São Paulo, CEP 06016-008</p>
+  <p>Telefone: (11) 9 1316-9650 | CNPJ: 33.078.097/0001-04</p>
+</header>
+
+<div class="container">
+  <section class="fade-in">
+    <h2>Escopo do Projeto</h2>
+    <p>Implantação de um <strong>Servidor de Arquivos Local</strong> com <strong>TrueNAS</strong> para gerenciamento e compartilhamento seguro de arquivos, incluindo:</p>
+    <ul>
+      <li>Levantamento de necessidades e requisitos.</li>
+      <li>Instalação e configuração do servidor TrueNAS.</li>
+      <li>Criação de usuários e grupos de acesso.</li>
+      <li>Estruturação de pastas e permissões.</li>
+      <li>Integração com a rede local do cliente.</li>
+      <li>Treinamento básico para uso e administração do sistema.</li>
+    </ul>
+  </section>
+
+  <section class="fade-in">
+    <h2>Itens Inclusos</h2>
+    <ul>
+      <li><strong>Servidor / PC dedicado:</strong> Xeon ou Core i5, 16GB RAM, SSD 120GB.</li>
+      <li><strong>2 HDs de 2TB</strong> (RAID1 espelhado para segurança dos dados).</li>
+      <li><strong>Switch Gigabit</strong> (opcional) para rede local.</li>
+      <li><strong>Pendrive de instalação</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="fade-in">
+    <h2>Valores</h2>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Valor (R$)</th>
+      </tr>
+      <tr>
+        <td>Hardware (servidor e discos)</td>
+        <td>4.000,00</td>
+      </tr>
+      <tr>
+        <td>Instalação e configuração do TrueNAS</td>
+        <td>1.500,00</td>
+      </tr>
+      <tr>
+        <td>Treinamento e documentação básica</td>
+        <td>500,00</td>
+      </tr>
+      <tr>
+        <th>Total do Projeto</th>
+        <th>6.000,00</th>
+      </tr>
+    </table>
+  </section>
+
+  <section class="fade-in">
+    <h2>Prazo e Condições</h2>
+    <p><strong>Prazo de Implantação:</strong> 2 a 3 dias úteis após aprovação.</p>
+    <p><strong>Condições de Pagamento:</strong> 50% na aprovação do orçamento e 50% na entrega do projeto.</p>
+    <p><strong>Garantia:</strong> 30 dias para ajustes e suporte técnico inicial.</p>
+  </section>
+
+  <section class="fade-in" style="text-align:center;">
+    <a href="tel:+5511913169650" class="cta-btn">Solicitar Orçamento</a>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2025 MW Consultoria - Todos os direitos reservados</p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
+
+</body>
+</html>
